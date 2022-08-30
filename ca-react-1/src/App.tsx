@@ -3,6 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import Paragraph from './paragraph';
 import Button from './components/button';
+import TextField from './components/text-field';
 
 // ManoParagrafas({
 //   content: 'Pirmas paragrafas'
@@ -27,7 +28,7 @@ const App: React.FC = () => {
         </Paragraph>
         <Button>First click</Button>
         <Button>Second click</Button>
-
+        <TextField />
         <a
           className="App-link"
           href="https://reactjs.org"

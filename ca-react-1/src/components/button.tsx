@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from './button.module.css';
 
 type ButtonProps = {
   children: React.ReactNode
@@ -6,7 +7,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ children }) => {
   return (
-    <button>{children}</button>
+    <button className={styles.container}>{children}</button>
   )
 }
 
