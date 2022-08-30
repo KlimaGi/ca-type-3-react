@@ -1,13 +1,19 @@
 @import 'variables';
+@import 'mixins';
 
-.btn {
-  background-color: $color-powderpink;
+@mixin button {
+  padding: 0.6rem 1rem;
 }
 
 @each $color-name,
 $color-value in $colors-map {
   .#{$color-name} {
     background-color: $color-value;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-bottom: 5px solid darken($color-value, 20);
+    margin: 0.5rem;
+    @include text-contrast($color-value);
 
     &:hover {
       cursor: pointer;

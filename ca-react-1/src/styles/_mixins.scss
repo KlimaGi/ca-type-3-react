@@ -1,0 +1,9 @@
+@mixin text-contrast($color) {
+  @if lightness($color)<50 {
+    color: whitesmoke;
+  }
+
+  @else {
+    color: #4b4a4a;
+  }
+}

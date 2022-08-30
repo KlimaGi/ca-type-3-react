@@ -3,7 +3,7 @@ import styles from './button.module.scss';
 
 type ButtonProps = {
   children: React.ReactNode,
-  color?: 'light' | 'mid' | 'error'
+  color?: 'light' | 'mid' | 'error' | 'dark'
 }
 
 const Button: React.FC<ButtonProps> = ({ color = 'light', children }) => {

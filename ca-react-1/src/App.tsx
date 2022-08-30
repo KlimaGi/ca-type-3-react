@@ -29,6 +29,7 @@ const App: React.FC = () => {
         <Button color='light'>First click</Button>
         <Button color='mid'>Second click</Button>
         <Button color='error'>Second click</Button>
+        <Button color='dark'>Second click</Button>
         <TextField />
         <a
           className="App-link"
