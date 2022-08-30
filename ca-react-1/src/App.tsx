@@ -2,13 +2,14 @@ import React from 'react';
 import logo from './logo.png';
 import './App.css';
 import Paragraph from './paragraph';
+import Button from './components/button';
 
 // ManoParagrafas({
 //   content: 'Pirmas paragrafas'
 // })
 
 
-function App() {
+const App: React.FC = () => {
 
   const title = 'Aplikacija';
   const linkText = 'React ismok';
@@ -19,7 +20,13 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p> {title} </p>
         <Paragraph content='Pirmas paragrafas' author='Some Jerk' />
-        <Paragraph content='Antras paragrafas' />
+        <Paragraph content='Antras paragrafas' >
+          <div>
+            <p>My paragraph content</p>
+          </div>
+        </Paragraph>
+        <Button>First click</Button>
+        <Button>Second click</Button>
 
         <a
           className="App-link"
