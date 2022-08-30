@@ -1,13 +1,14 @@
 import * as React from 'react';
-import styles from './button.module.css';
+import styles from './button.module.scss';
 
 type ButtonProps = {
-  children: React.ReactNode
+  children: React.ReactNode,
+  color?: 'light' | 'mid' | 'error'
 }
 
-const Button: React.FC<ButtonProps> = ({ children }) => {
+const Button: React.FC<ButtonProps> = ({ color = 'light', children }) => {
   return (
-    <button className={styles.container}>{children}</button>
+    <button className={styles.btn + ' ' + styles[color]}>{children}</button>
   )
 }
 

@@ -26,8 +26,9 @@ const App: React.FC = () => {
             <p>My paragraph content</p>
           </div>
         </Paragraph>
-        <Button>First click</Button>
-        <Button>Second click</Button>
+        <Button color='light'>First click</Button>
+        <Button color='mid'>Second click</Button>
+        <Button color='error'>Second click</Button>
         <TextField />
         <a
           className="App-link"
