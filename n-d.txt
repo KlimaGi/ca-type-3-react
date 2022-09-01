@@ -11,7 +11,7 @@ Peržiūrėti:
   
 NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
   Pasidaryti žiūrint:
-    * https://www.youtube.com/watch?v=pnhO8UaCgxg&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=4&ab_channel=TheNetNinja
+    ** https://www.youtube.com/watch?v=pnhO8UaCgxg&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=4&ab_channel=TheNetNinja
     * https://www.youtube.com/watch?v=0sSYmRImgRY&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=5&ab_channel=TheNetNinja
 
 
@@ -35,4 +35,4 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
     https://www.youtube.com/watch?v=hVdTQWASliE&ab_channel=TraversyMedia
     https://codepen.io/bradtraversy/pen/XerXYV
 
-    
+

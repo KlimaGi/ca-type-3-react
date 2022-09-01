@@ -12,14 +12,18 @@ import TextField from './components/text-field';
 
 const App: React.FC = () => {
 
-  const title = 'Aplikacija';
+  const title = 'Welcome to the new blog';
+  const readers = 54;
   const linkText = 'React ismok';
+  const person = { name: 'yoshi', age: 30 };
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p> {title} </p>
+        <h4> {title} </h4>
+        <span>Read by {readers} readers</span>
+        <span>{person.name}</span>
         <Paragraph content='Pirmas paragrafas' author='Some Jerk' />
         <Paragraph content='Antras paragrafas' >
           <div>
