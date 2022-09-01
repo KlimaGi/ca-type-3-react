@@ -1,12 +1,13 @@
-import React from 'react';
-
-import './App.css';
-
+import * as React from 'react';
+import Hero from './components/hero';
+import SideBox from './components/side-box';
 
 const App: React.FC = () => {
+
   return (
     <main>
-      <h1>Some header</h1>
+      <Hero />
+      <SideBox />
     </main>
   );
 }
