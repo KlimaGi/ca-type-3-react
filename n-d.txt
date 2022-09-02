@@ -12,12 +12,12 @@ Peržiūrėti:
 NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
   Pasidaryti žiūrint:
     ** https://www.youtube.com/watch?v=pnhO8UaCgxg&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=4&ab_channel=TheNetNinja
-    * https://www.youtube.com/watch?v=0sSYmRImgRY&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=5&ab_channel=TheNetNinja
+    ** https://www.youtube.com/watch?v=0sSYmRImgRY&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&index=5&ab_channel=TheNetNinja
 
 
 08-31
     19 min - perziureti
-    * https://www.youtube.com/watch?v=Zz6eOVaaelI&t=1s
+    ** https://www.youtube.com/watch?v=Zz6eOVaaelI&t=1s
 
 17 min - atlikti ptitaikius react - sukurti nauja projekta, naudojant stiliaus modulio failus (simple-hero-r1)
     ** https://www.youtube.com/watch?v=fs923Mu5EXY
@@ -38,9 +38,9 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
 9-02:
   Perskaityti:
-    https://reactjs.org/docs/handling-events.html
-    https://reactjs.org/docs/forms.html
-    https://reactjs.org/docs/conditional-rendering.html
+  **  https://reactjs.org/docs/handling-events.html
+  **  https://reactjs.org/docs/forms.html
+  ** https://reactjs.org/docs/conditional-rendering.html
 
   Peržiūrėti:
     https://www.youtube.com/watch?v=IkMND33x0qQ&ab_channel=TheNetNinja
@@ -48,6 +48,19 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
 
   Išskaidykite pamokos '85 - useState example': <CounterExample> komponentą smulkesniais 
-  komponentais ir pritaikykite stilius naudojas ***.module.scss failus:
+  komponentais ir pritaikykite stilius naudojant ***.module.scss failus:
     * <Input ... />
     * <Button ... />
+
+
+9-05:
+  Perskaityti:
+    https://reactjs.org/docs/lifting-state-up.html
+    https://reactjs.org/docs/composition-vs-inheritance.html
+    https://reactjs.org/docs/thinking-in-react.html
+
+  Peržiūrėti:
+    https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=5885s&ab_channel=TraversyMedia
+
+  Kas planuoja įsidarbinti per pusę metų:
+    Pabandyti padaryti naudojant TypeScript
