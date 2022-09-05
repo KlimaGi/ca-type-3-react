@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./components/header"
+import Header from "./components/header";
 
 import './App.css';
 
@@ -10,6 +10,8 @@ function App() {
 
       <h1>Hello {name}</h1>
       <Header />
+
+
     </div >
   );
 }

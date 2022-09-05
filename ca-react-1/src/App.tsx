@@ -1,51 +1,42 @@
 import React from 'react';
 import logo from './logo.png';
-import './App.css';
-import Paragraph from './paragraph';
-import Button from './components/button';
-import TextField from './components/text-field';
-
-// ManoParagrafas({
-//   content: 'Pirmas paragrafas'
-// })
+import { Typography, Container, Button } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import SendIcon from '@mui/icons-material/Send';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import AlarmIcon from '@mui/icons-material/Alarm';
 
 
-const App: React.FC = () => {
 
-  const title = 'Welcome to the new blog';
-  const readers = 54;
-  const linkText = 'React ismok';
-  const person = { name: 'yoshi', age: 30 };
+const App: React.FC = () => (
+  <Container>
+    <Typography variant='h2' component='h1' align='center' >
+      Mui
+      <div>
+        <Button variant="outlined" size="large">
+          Large
+        </Button>
+        <Button variant="contained" size="small">
+          Small
+        </Button>
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h4> {title} </h4>
-        <span>Read by {readers} readers</span>
-        <span>{person.name}</span>
-        <Paragraph content='Pirmas paragrafas' author='Some Jerk' />
-        <Paragraph content='Antras paragrafas' >
-          <div>
-            <p>My paragraph content</p>
-          </div>
-        </Paragraph>
-        <Button color='light'>First click</Button>
-        <Button color='mid'>Second click</Button>
-        <Button color='error'>Second click</Button>
-        <Button color='dark'>Second click</Button>
-        <TextField />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {linkText}
-        </a>
-      </header>
-    </div>
-  );
-}
+        <Button variant="contained" endIcon={<SendIcon />} color="error">
+          Send
+        </Button>
+
+        <Button variant="contained" color="success" startIcon={<DeleteIcon />}>
+          Delete
+        </Button>
+
+        <IconButton color="warning" aria-label="add an alarm">
+          <AlarmIcon />
+        </IconButton>
+      </div>
+
+    </Typography>
+  </Container>
+);
+
 
 export default App;
