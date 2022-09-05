@@ -55,12 +55,31 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
 9-05:
   Perskaityti:
-    https://reactjs.org/docs/lifting-state-up.html
-    https://reactjs.org/docs/composition-vs-inheritance.html
-    https://reactjs.org/docs/thinking-in-react.html
+  **  https://reactjs.org/docs/lifting-state-up.html
+  **  https://reactjs.org/docs/composition-vs-inheritance.html
+
+React elements like <Contacts /> and <Chat /> are just objects, so you can
+-- pass them as props -- like any other data. This approach may remind you of “slots” in other libraries but there are no limitations on what you can
+ pass as props in React.
+
+ function App() {
+  return (
+    <SplitPane left={<Contacts />} right={<Chat/>} />
+  );
+}
+
+--Specialization: In React, this is also achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props.
+Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way.
+
+  ** https://reactjs.org/docs/thinking-in-react.html
 
   Peržiūrėti:
     https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=5885s&ab_channel=TraversyMedia
 
   Kas planuoja įsidarbinti per pusę metų:
     Pabandyti padaryti naudojant TypeScript
+
+    _________________
+    09-06:
+  Peržiūrėti ir pasidaryti naujam projekte:
+    https://www.youtube.com/watch?v=fzxEECHnsvU&ab_channel=LamaDev

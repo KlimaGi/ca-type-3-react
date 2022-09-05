@@ -10,8 +10,6 @@ function App() {
 
       <h1>Hello {name}</h1>
       <Header />
-
-
     </div >
   );
 }
