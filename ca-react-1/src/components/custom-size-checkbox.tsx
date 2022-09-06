@@ -17,4 +17,4 @@ const CustomSizeCheckbox = styled(Checkbox, {
 
 })) as StyledComponent<Omit<CheckboxProps, 'size'> & MUIStyledCommonProps<Theme>, { size?: number }, {}>;
 
-export default CustomSizeCheckbox
+export default CustomSizeCheckbox;
