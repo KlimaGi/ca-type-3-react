@@ -28,7 +28,7 @@ const LoginForm = () => {
         height: '100vh',
         display: 'grid',
         placeItems: 'center',
-        backgroundImage: 'url(/)',
+        backgroundImage: 'url(/colors-mountain.jpg)',
         backgroundSize: 'cover',
       }}>
       <Paper
