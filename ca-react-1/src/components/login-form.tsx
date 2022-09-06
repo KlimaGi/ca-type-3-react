@@ -5,24 +5,10 @@ import {
   Typography,
   TextField,
   Button,
-  FormControlLabel,
-  Checkbox,
-  styled,
-  CheckboxProps
+  FormControlLabel
 } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
-import { StyledComponent } from '@emotion/styled';
-import { MUIStyledCommonProps, Theme } from '@mui/system';
-
-const LargeCheckbox = styled(Checkbox, {
-  shouldForwardProp: (propName) => propName !== 'size',
-})(({ size = 40 }) => ({
-  svg: {
-    height: size,
-    width: size,
-  }
-
-})) as StyledComponent<Omit<CheckboxProps, 'size'> & MUIStyledCommonProps<Theme>, { size?: number }, {}>;
+import CustomSizeCheckbox from './custom-size-checkbox'
 
 const LoginForm = () => {
   return (
@@ -44,11 +30,11 @@ const LoginForm = () => {
         }}>
         <SecurityIcon sx={{ fontSize: 50, alignSelf: 'center' }} />
         <Typography component="h1" variant="h3" align='center'>Login Form</Typography>
-        <TextField />
-        <TextField />
+        <TextField variant="filled" label="Email" />
+        <TextField variant="filled" label="Password" />
         <FormControlLabel
-          control={<LargeCheckbox defaultChecked size={60} />}
-          label="Label"
+          control={<CustomSizeCheckbox defaultChecked size={40} />}
+          label="Remember"
         />
         <Button variant="contained" sx={{ height: 60 }} size="large">Sign In</Button>
       </Paper>
