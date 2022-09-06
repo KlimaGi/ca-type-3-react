@@ -19,7 +19,7 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
     19 min - perziureti
     ** https://www.youtube.com/watch?v=Zz6eOVaaelI&t=1s
 
-17 min - atlikti ptitaikius react - sukurti nauja projekta, naudojant stiliaus modulio failus (simple-hero-r1)
+17 min - atlikti pritaikius react - sukurti nauja projekta, naudojant stiliaus modulio failus (simple-hero-r1)
     ** https://www.youtube.com/watch?v=fs923Mu5EXY
     ** https://codepen.io/Web_Cifar/pen/oNzPXRY
 
@@ -31,7 +31,7 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
    ** https://www.youtube.com/watch?v=O6P86uwfdR0&ab_channel=WebDevSimplified
 
   
-  Skurkite naują React-TS projektą ir perdarykite šį puslapį naudojant stiliaus modulio failus:
+  Skurkite naują React-TS projektą ir perdarykite šį puslapį naudojant stiliaus modulio failus:  (landing-page-r2)
     https://www.youtube.com/watch?v=hVdTQWASliE&ab_channel=TraversyMedia
     https://codepen.io/bradtraversy/pen/XerXYV
 
@@ -73,7 +73,7 @@ Props and composition give you all the flexibility you need to customize a compo
 
   ** https://reactjs.org/docs/thinking-in-react.html
 
-  Peržiūrėti:
+  Peržiūrėti:  (crash-course-r3)
     https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=5885s&ab_channel=TraversyMedia
 
   Kas planuoja įsidarbinti per pusę metų:
