@@ -59,7 +59,8 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
   **  https://reactjs.org/docs/composition-vs-inheritance.html
 
 React elements like <Contacts /> and <Chat /> are just objects, so you can
--- pass them as props -- like any other data. This approach may remind you of “slots” in other libraries but there are no limitations on what you can
+-- pass them as props -- like any other data. This approach may remind you of “slots” 
+in other libraries but there are no limitations on what you can
  pass as props in React.
 
  function App() {

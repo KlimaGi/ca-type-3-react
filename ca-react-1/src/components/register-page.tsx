@@ -8,7 +8,7 @@ import {
   Autocomplete
 } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
-
+import CheckboxGroup from './form-controls/checkbox-group'
 
 const topics: Topic[] = [
   { id: '1', title: 'html' },
@@ -88,6 +88,17 @@ const RegisterPage = () => {
               {...inputProps}
             />
           )}
+        />
+
+        <CheckboxGroup
+          label="Interesting information types"
+          name='interest-types'
+          options={[
+            { value: '1', label: 'posts' },
+            { value: '2', label: 'video' },
+            { value: '3', label: 'questions' },
+            { value: '4', label: 'exercises' },
+          ]}
         />
 
         <Button
