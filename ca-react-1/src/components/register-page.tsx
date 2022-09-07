@@ -33,7 +33,7 @@ const RegisterPage = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log('siunciami duomenys i serveri per globalios busenos valdymo iraki');
+    console.log('siunciami duomenys i serveri per globalios busenos valdymo iranki');
     console.log({ email, password });
   }
 
@@ -99,6 +99,11 @@ const RegisterPage = () => {
             { value: '3', label: 'questions' },
             { value: '4', label: 'exercises' },
           ]}
+          value={[
+            { value: '2', label: 'video' },
+            { value: '4', label: 'exercises' },
+          ]}
+          onChange={(event, selectedOptions) => console.log({ selectedOptions })}
         />
 
         <Button
