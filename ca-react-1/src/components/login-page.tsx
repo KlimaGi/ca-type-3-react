@@ -10,7 +10,7 @@ import {
 import SecurityIcon from '@mui/icons-material/Security';
 import CustomSizeCheckbox from './form-controls/custom-size-checkbox'
 
-const LoginForm = () => {
+const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(true);
@@ -28,7 +28,7 @@ const LoginForm = () => {
         height: '100vh',
         display: 'grid',
         placeItems: 'center',
-        backgroundImage: 'url(/colors-mountain.jpg)',
+        backgroundImage: 'url(/image-bg.png)',
         backgroundSize: 'cover',
       }}>
       <Paper
@@ -72,10 +72,12 @@ const LoginForm = () => {
           variant="contained"
           sx={{ height: 60 }}
           size="large"
-        >Sign In</Button>
+        >
+          Sign In
+        </Button>
       </Paper>
     </Box>
   )
 }
 
-export default LoginForm;
+export default LoginPage;

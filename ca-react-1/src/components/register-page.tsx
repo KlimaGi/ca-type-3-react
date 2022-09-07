@@ -8,7 +8,17 @@ import {
   Autocomplete
 } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
-import CheckboxGroup from './form-controls/checkbox-group'
+import CheckboxGroup, { CheckboxOption } from './form-controls/checkbox-group'
+
+const contentType2CheckboxOption = ({ id, title }: ContentType): CheckboxOption => ({
+  value: id,
+  label: title,
+});
+
+const checkboxOptionToContentType = ({ value, label }: CheckboxOption): ContentType => ({
+  id: value,
+  title: label,
+});
 
 const topics: Topic[] = [
   { id: '1', title: 'html' },
@@ -23,19 +33,29 @@ const topics: Topic[] = [
   { id: '10', title: 'express' },
   { id: '11', title: 'sql' },
   { id: '12', title: 'mongodb' },
-]
+];
 
-const RegisterPage = () => {
+const contentTypes: ContentType[] = [
+  { id: '1', title: 'posts' },
+  { id: '2', title: 'videos' },
+  { id: '3', title: 'questions' },
+  { id: '4', title: 'tasks' },
+];
+
+const contentTypeOptions = contentTypes.map(contentType2CheckboxOption);
+
+const RegisterPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [selectedTopics, setSelectedTopics] = useState<Topic[]>([]);
+  const [selectedContentTypes, setSelectedContentTypes] = React.useState<CheckboxOption[]>([]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log('siunciami duomenys i serveri per globalios busenos valdymo iranki');
-    console.log({ email, password });
-  }
+    console.log({ email, password, selectedTopics, selectedContentTypes: selectedContentTypes.map(checkboxOptionToContentType), });
+  };
 
   return (
     <Box
@@ -43,7 +63,7 @@ const RegisterPage = () => {
         height: '100vh',
         display: 'grid',
         placeItems: 'center',
-        backgroundImage: 'url(/colors-mountain.jpg)',
+        backgroundImage: 'url(/image-bg.png)',
         backgroundSize: 'cover',
       }}>
       <Paper
@@ -93,17 +113,9 @@ const RegisterPage = () => {
         <CheckboxGroup
           label="Interesting information types"
           name='interest-types'
-          options={[
-            { value: '1', label: 'posts' },
-            { value: '2', label: 'video' },
-            { value: '3', label: 'questions' },
-            { value: '4', label: 'exercises' },
-          ]}
-          value={[
-            { value: '2', label: 'video' },
-            { value: '4', label: 'exercises' },
-          ]}
-          onChange={(event, selectedOptions) => console.log({ selectedOptions })}
+          options={contentTypeOptions}
+          value={selectedContentTypes}
+          onChange={(_, newContentTypes) => setSelectedContentTypes(newContentTypes)}
         />
 
         <Button
@@ -111,7 +123,9 @@ const RegisterPage = () => {
           variant="contained"
           sx={{ height: 60 }}
           size="large"
-        >Sign In</Button>
+        >
+          Sign In
+        </Button>
       </Paper>
     </Box>
   )
