@@ -20,7 +20,11 @@ const CounterExample = () => {
       >
         <input
           type="number"
-          style={{ fontSize: 30, width: 140, textAlign: 'center' }}
+          style={{
+            fontSize: 30,
+            width: 140,
+            textAlign: 'center',
+          }}
           value={step}
           // Number(e.target.value)
           onChange={(e) => setStep(e.target.valueAsNumber)}
