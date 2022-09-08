@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FilledInput, FilledInputProps } from '@mui/material';
 
 type RangeInputProps = Omit<FilledInputProps, 'size'>;
@@ -9,13 +9,13 @@ type RangeInputProps = Omit<FilledInputProps, 'size'>;
 
 export const RangeInput: React.FC<RangeInputProps> = ({ sx = [], ...props }) => (
   <FilledInput
-    size='small'
+    size="small"
     sx={[
       {
         flexGrow: 1,
         input: {
           pt: 1,
-          textAlign: 'center'
+          textAlign: 'center',
         },
       },
       ...(sx instanceof Array ? sx : [sx]),

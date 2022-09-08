@@ -1,4 +1,4 @@
-import { Box, styled, } from '@mui/material';
+import { Box, styled } from '@mui/material';
 
 const InputContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
