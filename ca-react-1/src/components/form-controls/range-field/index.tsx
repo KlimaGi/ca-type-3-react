@@ -7,20 +7,22 @@ type RangeFieldProps = {
   max?: number,
 };
 
-type RangeInputChangeHandler = RangeInputProps['onChange'];
+type Range = [number, number];
+
+const orderRangeASC = (range: Range): Range => range.sort((x, y) => x - y) as Range;
 
 const RangeField: React.FC<RangeFieldProps> = ({ min = 0, max = 100 }) => {
-  const [privateValue, setPrivateValue] = useState<[number, number]>([min, max]);
+  const [privateValue, setPrivateValue] = useState<Range>([min, max]);
   const [privateMin, privateMax] = privateValue;
 
   const valueInRange = (newValue: number) => newValue <= max && newValue >= min;
 
-  const handleMinValueChange: RangeInputChangeHandler = (e, newMinValue) => {
-    setPrivateValue([newMinValue, privateMax]);
+  const handleMinValueChange: RangeInputProps['onChange'] = (e, newMinValue) => {
+    setPrivateValue(orderRangeASC([newMinValue, privateMax]));
   };
 
-  const handleMaxValueChange: RangeInputChangeHandler = (e, newMaxValue) => {
-    setPrivateValue([privateMin, newMaxValue]);
+  const handleMaxValueChange: RangeInputProps['onChange'] = (e, newMaxValue) => {
+    setPrivateValue(orderRangeASC([privateMin, newMaxValue]));
   };
 
   return (
