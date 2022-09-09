@@ -1,13 +1,15 @@
+@import "variables";
+
 .section-a {
-  padding: 20px;
-  background: #926239;
-  color: #fff;
+  padding: 60px;
+  background: $color-dark;
+  color: $color-white;
   text-align: center;
 }
 
 .section-b {
-  padding: 20px;
-  background: #f4f4f4;
+  padding: $spacing;
+  background: $color-white-sand;
   text-align: center;
 }
 
@@ -16,13 +18,14 @@
 }
 
 .section-c div {
-  padding: 20px;
+  padding: $spacing;
 }
 
 .section-c .box-1,
 .section-c .box-3 {
-  background: #926239;
-  color: #fff;
+  background: $color-dark;
+  color: $color-white;
+  padding: $spacing;
 }
 
 .section-c .box-2 {

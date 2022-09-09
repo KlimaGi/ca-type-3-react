@@ -1,10 +1,12 @@
+@import "variables";
+
 .button {
   font-size: 18px;
   text-decoration: none;
-  color: #926239;
-  border: #926239 1px solid;
+  color: $color-dark;
+  border: $color-dark 1px solid;
   padding: 10px 20px;
   border-radius: 10px;
   margin-top: 20px;
-  background-color: #92633900;
+  background-color: $color-opacity;
 }
