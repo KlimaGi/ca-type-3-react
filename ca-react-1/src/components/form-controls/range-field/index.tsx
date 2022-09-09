@@ -1,44 +1,42 @@
 import React, { useState } from 'react';
 import { Box, Typography, Slider } from '@mui/material';
-import { RangeInput, InputContainer } from './components';
+import { RangeInput, RangeInputProps, InputContainer } from './components';
 
 type RangeFieldProps = {
   min?: number,
   max?: number,
 };
 
-type RangeInputChangeHandler = React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+type RangeInputChangeHandler = RangeInputProps['onChange'];
 
 const RangeField: React.FC<RangeFieldProps> = ({ min = 0, max = 100 }) => {
   const [privateValue, setPrivateValue] = useState<[number, number]>([min, max]);
-  const [privateMinValue, privateMaxValue] = privateValue;
+  const [privateMin, privateMax] = privateValue;
 
-  const handleMinValueChange: RangeInputChangeHandler = (e) => {
-    // todo: nustatyti reiksme tik tuomet, jeigu ji nera mazesne uz props'a  - min
-    const minValue = Number(e.target.value) >= min ? Number(e.target.value) : min;
-    setPrivateValue([
-      minValue,
-      privateMaxValue,
-    ]);
+  const valueInRange = (newValue: number) => newValue <= max && newValue >= min;
+
+  const handleMinValueChange: RangeInputChangeHandler = (e, newMinValue) => {
+    setPrivateValue([newMinValue, privateMax]);
   };
-  const handleMaxValueChange: RangeInputChangeHandler = (e) => {
-    //  todo: nustatyti reiksme tik tuomet, jeigu ji nera didesne uz props'a  - max
-    const maxValue = Number(e.target.value) <= max ? Number(e.target.value) : max;
-    setPrivateValue([
-      privateMinValue,
-      maxValue,
-    ]);
+
+  const handleMaxValueChange: RangeInputChangeHandler = (e, newMaxValue) => {
+    setPrivateValue([privateMin, newMaxValue]);
   };
 
   return (
     <Box sx={{ width: 300 }}>
       <InputContainer>
         <RangeInput
-          value={privateMinValue}
+          value={privateMin}
           onChange={handleMinValueChange}
+          newValueIsValid={valueInRange}
         />
         <Typography>Iki</Typography>
-        <RangeInput value={privateMaxValue} onChange={handleMaxValueChange} />
+        <RangeInput
+          value={privateMax}
+          onChange={handleMaxValueChange}
+          newValueIsValid={valueInRange}
+        />
 
       </InputContainer>
       <Box sx={{ mx: 2 }}>
