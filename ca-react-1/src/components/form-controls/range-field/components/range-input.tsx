@@ -15,6 +15,7 @@ const RangeInput: React.FC<RangeInputProps> = ({
   ...props
 }) => {
   const [privateValue, setPrivateValue] = useState(value);
+  // TODO: pasalinti nulius pries verte input'e
 
   const handleBlur: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
     const newValue = Number(e.target.value);
