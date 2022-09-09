@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './header.module.scss';
 import Button from './button';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className={classes.showcase}>
       <h1 className={classes.h1}>Welcome To The Mountains</h1>

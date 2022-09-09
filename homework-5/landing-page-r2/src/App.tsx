@@ -3,7 +3,7 @@ import Header from './components/header';
 import Sections from './components/sections';
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <Header />

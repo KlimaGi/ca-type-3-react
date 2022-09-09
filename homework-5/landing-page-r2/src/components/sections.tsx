@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './sections.module.scss';
 
-const Sections = () => {
+const Sections: React.FC = () => {
   return (
     <div>
       <section className={classes['section-a']}>

@@ -1,11 +1,9 @@
 import React from 'react';
 import classes from './button.module.scss';
 
-const Button = () => {
+const Button: React.FC = () => {
   return (
-
     <button className={classes.button}>Read More</button>
-
   )
 }
 
