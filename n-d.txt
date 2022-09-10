@@ -32,7 +32,7 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
   
   Skurkite naują React-TS projektą ir perdarykite šį puslapį naudojant stiliaus modulio failus:  (landing-page-r2)
-    https://www.youtube.com/watch?v=hVdTQWASliE&ab_channel=TraversyMedia
+  **  https://www.youtube.com/watch?v=hVdTQWASliE&ab_channel=TraversyMedia
     https://codepen.io/bradtraversy/pen/XerXYV
 
 
