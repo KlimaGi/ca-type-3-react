@@ -11,16 +11,19 @@ type HeaderProps = {
 //   color: 'darkcyan',
 // };
 
-const Header: React.FC<HeaderProps> = ({ title }) => (
-  <header className={styles.header}>
-    <h1>
-      {title}
-    </h1>
-    <Button color="green" text="Hello" />
-    <Button color="purple" text="Hello 1" />
-    <Button text="Hello 1" />
-  </header>
+const Header: React.FC<HeaderProps> = ({ title }) => {
+  const onClick = () => {
+    console.log('click from header');
+  };
+  return (
+    <header className={styles.header}>
+      <h1>
+        {title}
+      </h1>
+      <Button color="green" text="Hello" onClick={onClick} />
+    </header>
 
-);
+  );
+};
 
 export default Header;

@@ -2,12 +2,19 @@ import React from 'react';
 import styles from './button.module.scss';
 
 type ButtonProp = {
-  text: string
+  text: string,
+  onClick(event: React.MouseEvent<HTMLButtonElement>): void,
   color?: string,
 };
 
-const Button: React.FC<ButtonProp> = ({ color, text }) => (
-  <button style={{ backgroundColor: color }} className={styles.btn}>{text}</button>
+const Button: React.FC<ButtonProp> = ({ color, text, onClick }) => (
+  <button
+    onClick={onClick}
+    style={{ backgroundColor: color }}
+    className={styles.btn}
+  >
+    {text}
+  </button>
 );
 
 Button.defaultProps = {
