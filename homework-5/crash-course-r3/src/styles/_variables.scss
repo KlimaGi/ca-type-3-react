@@ -1,0 +1,11 @@
+$color-powderblue: powderblue;
+$color-powderpink: #d79baf;
+$color-blue: #42858e;
+$color-dark: #295358;
+
+$colors-map: (
+  'light': $color-powderblue,
+  'mid': $color-blue,
+  'error': $color-powderpink,
+  'dark': $color-dark,
+);

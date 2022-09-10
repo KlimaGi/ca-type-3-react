@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Header = () => {
-  return (
-    <div>
-      <h1>Task tracker </h1>
-    </div>
-  )
-}
+const Header = () => (
+  <div>
+    <h1>Task tracker </h1>
+  </div>
+);
 
-export default Header
+export default Header;

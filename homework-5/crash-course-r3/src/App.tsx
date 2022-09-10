@@ -1,17 +1,21 @@
 import React from 'react';
-import Header from "./components/header";
+import Header from './components/header';
 
 import './App.css';
 
-function App() {
+const App = () => {
   const name: string = 'BRAD';
   return (
     <div className="container">
 
-      <h1>Hello {name}</h1>
+      <span>
+        Hello
+
+        {name}
+      </span>
       <Header />
-    </div >
+    </div>
   );
-}
+};
 
 export default App;
