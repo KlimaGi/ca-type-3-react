@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/header';
 import Tasks from './components/tasks';
+import AddTask from './components/add-task';
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -22,8 +23,9 @@ const App = () => {
     },
   ]);
 
-  // Delete Task
+  // Add Task
 
+  // Delete Task
   const deleteTask: onDeleteFCProp = (id: number) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
@@ -38,7 +40,7 @@ const App = () => {
   return (
     <div className="container">
       <Header title="Hello" />
-
+      <AddTask />
       {tasks.length > 0
         ? (
           <Tasks
