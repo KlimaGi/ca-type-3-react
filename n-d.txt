@@ -44,7 +44,7 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
   Peržiūrėti:
   ** https://www.youtube.com/watch?v=IkMND33x0qQ&ab_channel=TheNetNinja
-  **  https://www.youtube.com/watch?v=4oCVDkb_EIs&ab_channel=WebDevSurvivalGuide
+  ** https://www.youtube.com/watch?v=4oCVDkb_EIs&ab_channel=WebDevSurvivalGuide
 
 
   Išskaidykite pamokos '85 - useState example': <CounterExample> komponentą smulkesniais 

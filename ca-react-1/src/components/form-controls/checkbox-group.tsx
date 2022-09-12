@@ -1,5 +1,7 @@
-import React from 'react'
-import { Box, Checkbox, FormControlLabel, FormGroup, FormLabel } from '@mui/material';
+import React from 'react';
+import {
+  Box, Checkbox, FormControlLabel, FormGroup, FormLabel,
+} from '@mui/material';
 
 export type CheckboxOption = {
   value: string,
@@ -20,17 +22,20 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
   label, name, options, value, onChange,
 }) => {
   const checkboxGroupRef = React.useRef<null | HTMLDivElement>(null);
-  const selectedValues = value && value.map(x => x.value);
+  const selectedValues = value && value.map((x) => x.value);
 
   const createAppendedValue: MutateOptions = (currentValue, option) => [...currentValue, option];
 
-  const createReducedValue: MutateOptions = (currentValue, option) => currentValue.filter((x) => x.value !== option.value);
+  const createReducedValue: MutateOptions = (currentValue, option) => (
+    currentValue.filter((x) => x.value !== option.value));
 
   const createControlledValue = (
     currentValue: CheckboxOption[],
     checked: boolean,
     newOption: CheckboxOption,
-  ): CheckboxOption[] => (checked ? createAppendedValue(currentValue, newOption) : createReducedValue(currentValue, newOption));
+  ): CheckboxOption[] => (checked
+    ? createAppendedValue(currentValue, newOption)
+    : createReducedValue(currentValue, newOption));
 
   const createUncontrolledValue = (): CheckboxOption[] => {
     const optionContainer = checkboxGroupRef.current as HTMLDivElement;
@@ -47,7 +52,6 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
     checked: boolean,
     newOption: CheckboxOption,
   ): void => {
-
     if (onChange) {
       const componentIsControlled = value !== undefined;
 
@@ -60,7 +64,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
   };
 
   return (
-    <Box >
+    <Box>
       <FormLabel sx={{ letterSpacing: '0.05em', mb: 1 }}>{label}</FormLabel>
       <FormGroup sx={{ display: 'flex', flexDirection: 'column', px: 2 }} ref={checkboxGroupRef}>
         {options.map((option) => (
@@ -70,9 +74,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
               <Checkbox
                 value={option.value}
                 name={name}
-                onChange={(e, newChecked) => handleCheckboxChange(
-                  e, newChecked, option
-                )}
+                onChange={(e, newChecked) => handleCheckboxChange(e, newChecked, option)}
                 checked={selectedValues?.includes(option.value)}
               />
             )}
@@ -81,7 +83,7 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
         ))}
       </FormGroup>
     </Box>
-  )
-}
+  );
+};
 
 export default CheckboxGroup;
