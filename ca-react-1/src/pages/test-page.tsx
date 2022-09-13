@@ -1,35 +1,24 @@
-import React from 'react';
-import { Container, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Box } from '@mui/material';
 
 import RangeField from '../components/form-controls/range-field';
 
-const TestPage = () => (
-  <Container sx={{ mt: 6 }}>
-    <Typography>min: 50, max: 200, value: [75, 150]</Typography>
-    <RangeField min={50} max={200} value={[75, 150]} />
+const TestPage: React.FC = () => {
+  const [priceRange, setPriceRange] = useState<NumberRange>([175, 280]);
 
-    <Typography>min: 50, max: 200</Typography>
-    <RangeField min={50} max={200} />
+  return (
+    <Container sx={{ mt: 6 }}>
+      <Box component="pre">
+        {JSON.stringify(priceRange, null, 4)}
+      </Box>
 
-    <Typography>min: 50, value: [75, 150]</Typography>
-    <RangeField min={50} value={[75, 150]} />
+      <RangeField
+        value={priceRange}
+        onChange={(_, newPriceRange) => setPriceRange(newPriceRange)}
+      />
+    </Container>
 
-    <Typography>min: 50</Typography>
-    <RangeField min={50} />
-
-    <Typography>max: 200, value: [75, 150]</Typography>
-    <RangeField max={200} value={[75, 150]} />
-
-    <Typography>max: 200</Typography>
-    <RangeField max={200} />
-
-    <Typography>value: [75, 150]</Typography>
-    <RangeField value={[75, 150]} />
-
-    <Typography>Empty</Typography>
-    <RangeField />
-  </Container>
-
-);
+  );
+};
 
 export default TestPage;
