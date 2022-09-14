@@ -3,7 +3,7 @@ import Header from './components/header';
 import Tasks from './components/tasks';
 import AddTask from './components/add-task';
 
-const App = () => {
+const App: React.FC = () => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -24,6 +24,11 @@ const App = () => {
   ]);
 
   // Add Task
+  const addTask: subAddTaskProp = (task: subTaskProp) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { ...task, id };
+    setTasks([...tasks, newTask]);
+  };
 
   // Delete Task
   const deleteTask: onDeleteFCProp = (id: number) => {
@@ -40,7 +45,7 @@ const App = () => {
   return (
     <div className="container">
       <Header title="Hello" />
-      <AddTask />
+      <AddTask onAdd={addTask} />
       {tasks.length > 0
         ? (
           <Tasks

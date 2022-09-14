@@ -3,13 +3,29 @@ import React, { useState } from 'react';
 import styles from './add-task.module.scss';
 import stylesBtn from './button.module.scss';
 
-const AddTask = () => {
+type AddTaskFcProp = {
+  onAdd: subAddTaskProp,
+};
+
+const AddTask: React.FC<AddTaskFcProp> = ({ onAdd }) => {
   const [text, setText] = useState('');
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState(false);
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!text) {
+      alert('Please add task');
+    }
+    onAdd({ text, day, reminder });
+
+    setText('');
+    setDay('');
+    setReminder(false);
+  };
+
   return (
-    <form className={styles['add-form']}>
+    <form className={styles['add-form']} onSubmit={onSubmit}>
       <div className={styles['form-control']}>
         <label>Task</label>
         <input
@@ -34,7 +50,8 @@ const AddTask = () => {
         <label>Set Reminder</label>
         <input
           type="checkbox"
-          value={reminder}
+          checked={reminder}
+          // value={reminder}
           onChange={(e) => setReminder(e.currentTarget.checked)}
         />
       </div>
