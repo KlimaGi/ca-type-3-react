@@ -1,8 +1,11 @@
+@import '../styles/variables';
+
 .task {
-  background: #c6c5c531;
+  background: $color-light-grey;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  color: $color-dark;
 
   h3 {
     display: flex;
@@ -12,5 +15,5 @@
 }
 
 .reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid $color-dark;
 }

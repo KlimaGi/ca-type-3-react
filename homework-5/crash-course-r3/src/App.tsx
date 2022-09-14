@@ -45,7 +45,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Header title="Task Tracker" showAddForm={() => setShowAddTask(!showAddTask)} />
+      <Header title="Task Tracker" showAddForm={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0
         ? (

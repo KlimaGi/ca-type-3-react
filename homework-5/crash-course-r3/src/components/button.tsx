@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProp> = ({ color, text, onClick }) => (
 );
 
 Button.defaultProps = {
-  color: 'powderblue',
+  color: '#2c4b64',
 };
 
 export default Button;

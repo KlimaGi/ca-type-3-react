@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .add-form {
   margin-bottom: 40px;
 }
@@ -8,6 +10,7 @@
 
 .form-control label {
   display: block;
+  color: $color-dark;
 }
 
 .form-control input {

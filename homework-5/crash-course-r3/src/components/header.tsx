@@ -5,6 +5,7 @@ import Button from './button';
 type HeaderProps = {
   title: string,
   showAddForm(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void,
+  showAdd: boolean,
 };
 
 // css in js
@@ -12,12 +13,16 @@ type HeaderProps = {
 //   color: 'darkcyan',
 // };
 
-const Header: React.FC<HeaderProps> = ({ title, showAddForm }) => (
+const Header: React.FC<HeaderProps> = ({ title, showAddForm, showAdd }) => (
   <header className={styles.header}>
     <h1>
       {title}
     </h1>
-    <Button color="green" text="Add" onClick={showAddForm} />
+    <Button
+      color={showAdd ? 'indianred' : '#2c4b64'}
+      text={showAdd ? 'Close' : 'Add'}
+      onClick={showAddForm}
+    />
   </header>
 
 );

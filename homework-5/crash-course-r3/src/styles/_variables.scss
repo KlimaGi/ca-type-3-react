@@ -1,13 +1,13 @@
 $color-steelblue: steelblue;
 $color-dark: #2c4b64;
 $color-light: #f4eded;
+$color-light-grey: #c6c5c531;
+$color-red: indianred;
 
-$color-powderpink: #d79baf;
-$color-blue: #42858e;
 
 $colors-map: (
   'light': $color-steelblue,
-  'mid': $color-blue,
-  'error': $color-powderpink,
+  'mid': $color-steelblue,
+  'error': $color-red,
   'dark': $color-dark,
 );
