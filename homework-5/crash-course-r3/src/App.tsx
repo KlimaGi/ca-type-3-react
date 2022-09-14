@@ -5,7 +5,7 @@ import AddTask from './components/add-task';
 
 const App: React.FC = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<TaskProp[]>([]);
 
   // Add Task
   const addTask: subAddTaskProp = async (task: subTaskProp) => {
