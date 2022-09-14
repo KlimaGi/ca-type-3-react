@@ -3,7 +3,8 @@ import styles from './header.module.scss';
 import Button from './button';
 
 type HeaderProps = {
-  title: string
+  title: string,
+  showAddForm(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void,
 };
 
 // css in js
@@ -11,19 +12,14 @@ type HeaderProps = {
 //   color: 'darkcyan',
 // };
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
-  const onClick = () => {
-    console.log('click from header');
-  };
-  return (
-    <header className={styles.header}>
-      <h1>
-        {title}
-      </h1>
-      <Button color="green" text="Hello" onClick={onClick} />
-    </header>
+const Header: React.FC<HeaderProps> = ({ title, showAddForm }) => (
+  <header className={styles.header}>
+    <h1>
+      {title}
+    </h1>
+    <Button color="green" text="Add" onClick={showAddForm} />
+  </header>
 
-  );
-};
+);
 
 export default Header;

@@ -4,6 +4,7 @@ import Tasks from './components/tasks';
 import AddTask from './components/add-task';
 
 const App: React.FC = () => {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -44,8 +45,8 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Header title="Hello" />
-      <AddTask onAdd={addTask} />
+      <Header title="Task Tracker" showAddForm={() => setShowAddTask(!showAddTask)} />
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0
         ? (
           <Tasks

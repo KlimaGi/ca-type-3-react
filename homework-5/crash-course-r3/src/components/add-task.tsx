@@ -12,7 +12,7 @@ const AddTask: React.FC<AddTaskFcProp> = ({ onAdd }) => {
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (!text) {
       alert('Please add task');
