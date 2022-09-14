@@ -1,38 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import Tasks from './components/tasks';
 import AddTask from './components/add-task';
 
 const App: React.FC = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'some appointment',
-      day: 'Nov 9th at 2:30pm',
-      reminder: true,
-    }, {
-      id: 2,
-      text: 'some call',
-      day: 'Sep 20th at 10:00am',
-      reminder: true,
-    }, {
-      id: 3,
-      text: 'some other call',
-      day: 'Sep 24th at 2:30pm',
-      reminder: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
+
+  // Fetch Tasks
+  const fetchTasks = async () => {
+    const res = await fetch('http://localhost:5000/tasks');
+    const data = await res.json();
+
+    return data;
+  };
+
+  useEffect(() => {
+    const getTasks = async () => {
+      const tasksFromServer = await fetchTasks();
+      setTasks(tasksFromServer);
+    };
+
+    getTasks();
+  }, []);
 
   // Add Task
-  const addTask: subAddTaskProp = (task: subTaskProp) => {
-    const id = Math.floor(Math.random() * 10000) + 1;
-    const newTask = { ...task, id };
-    setTasks([...tasks, newTask]);
+  const addTask: subAddTaskProp = async (task: subTaskProp) => {
+    const res = await fetch('http://localhost:5000/tasks', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(task),
+    });
+    const data = await res.json();
+    setTasks([...tasks, data]);
   };
 
   // Delete Task
-  const deleteTask: onDeleteFCProp = (id: number) => {
+  const deleteTask: onDeleteFCProp = async (id: number) => {
+    await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: 'DELETE',
+    });
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
