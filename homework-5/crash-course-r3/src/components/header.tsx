@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './header.module.scss';
 import Button from './button';
 
@@ -13,18 +14,24 @@ type HeaderProps = {
 //   color: 'darkcyan',
 // };
 
-const Header: React.FC<HeaderProps> = ({ title, showAddForm, showAdd }) => (
-  <header className={styles.header}>
-    <h1>
-      {title}
-    </h1>
-    <Button
-      color={showAdd ? 'indianred' : '#2c4b64'}
-      text={showAdd ? 'Close' : 'Add'}
-      onClick={showAddForm}
-    />
-  </header>
+const Header: React.FC<HeaderProps> = ({ title, showAddForm, showAdd }) => {
+  const location = useLocation();
 
-);
+  return (
+    <header className={styles.header}>
+      <h1>
+        {title}
+      </h1>
+      {location.pathname === '/' && (
+        <Button
+          color={showAdd ? 'indianred' : '#2c4b64'}
+          text={showAdd ? 'Close' : 'Add'}
+          onClick={showAddForm}
+        />
+      )}
+    </header>
+
+  );
+};
 
 export default Header;
