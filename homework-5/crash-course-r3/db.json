@@ -15,8 +15,20 @@
     {
       "text": "rgvs",
       "day": "534654",
-      "reminder": false,
+      "reminder": true,
       "id": 4
+    },
+    {
+      "text": "rtdhbth",
+      "day": "bhdthd",
+      "reminder": false,
+      "id": 5
+    },
+    {
+      "text": "fdhvfdhdf",
+      "day": "fvhfdgdf",
+      "reminder": false,
+      "id": 6
     }
   ]
 }
