@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 
 const RightBar = () => (
+  // todo: create more components from this data
   <Box
     flex={2}
     p={2}

@@ -4,6 +4,7 @@ import SideBar from './components/side-bar';
 import Feed from './components/feed';
 import RightBar from './components/right-bar';
 import NavBar from './components/nav-bar';
+import AddEl from './components/add';
 
 const App: React.FC = () => (
   <Box>
@@ -14,6 +15,7 @@ const App: React.FC = () => (
       <RightBar />
 
     </Stack>
+    <AddEl />
 
   </Box>
 );
