@@ -14,6 +14,7 @@ const SideBar = () => (
     sx={{ display: { xs: 'none', sm: 'block' } }}
   >
     <List>
+
       <ListItem disablePadding>
         <ListItemButton component="a" href="#home">
           <ListItemIcon>
