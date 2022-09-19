@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import {
-  Box, Fab, Modal, Tooltip, Typography, styled, Avatar, TextField,
+  Box, Fab, Modal, Tooltip, Typography, styled, Avatar, TextField, Stack, ButtonGroup, Button,
 } from '@mui/material';
-import { Add as AddIcon } from '@mui/icons-material';
+import {
+  Add as AddIcon, EmojiEmotions, PersonAdd, VideoCameraBack, Image, DateRange,
+} from '@mui/icons-material';
 
 const StyledModal = styled(Modal)({
   display: 'flex',
@@ -55,6 +57,27 @@ const AddEl = () => {
             placeholder="What's on your mind?"
             variant="standard"
           />
+          <Stack direction="row" gap={1} mt={2} mb={3}>
+            <EmojiEmotions color="primary" />
+            <Image color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
+          </Stack>
+
+          <ButtonGroup
+            fullWidth
+            variant="contained"
+            aria-label="outlined primary button group"
+          >
+            <Button>Post</Button>
+            <Button
+              sx={{ width: '100px' }}
+            >
+              <DateRange />
+            </Button>
+
+          </ButtonGroup>
+
         </Box>
       </StyledModal>
     </>
