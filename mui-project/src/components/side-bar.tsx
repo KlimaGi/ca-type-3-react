@@ -6,7 +6,7 @@ import {
   Home, Settings, AccountBox, Person, Storefront, Group, Article, ModeNight,
 } from '@mui/icons-material';
 
-const SideBar = () => (
+const SideBar = ({ mode, setMode }) => (
   // todo: create list element and send text, icon, link as a props
   <Box
     flex={1}
@@ -84,7 +84,7 @@ const SideBar = () => (
             <ListItemIcon>
               <ModeNight />
             </ListItemIcon>
-            <Switch />
+            <Switch onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')} />
           </ListItemButton>
         </ListItem>
 
