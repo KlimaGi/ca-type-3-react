@@ -78,30 +78,39 @@ Props and composition give you all the flexibility you need to customize a compo
   **  https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=5885s&ab_channel=TraversyMedia
 
   Kas planuoja įsidarbinti per pusę metų:
-    Pabandyti padaryti naudojant TypeScript
+    Pabandyti padaryti naudojant TypeScript ---> ? ar teisingai pritaikiau typescript
 
     _________________
     09-06:
-  Peržiūrėti ir pasidaryti naujam projekte:
-    https://www.youtube.com/watch?v=fzxEECHnsvU&ab_channel=LamaDev
+  Peržiūrėti ir pasidaryti naujam projekte: (mui-project) -- geri -sm -md -lg pavyzdziai
+          // todo: pritaikyti typescript
+          // isskaidyti komponentus
+  **  https://www.youtube.com/watch?v=fzxEECHnsvU&ab_channel=LamaDev
 
     09-06 
     CustomSizeCheckbox - pasigilinti
-    https://mui.com/system/styled/
+  **  https://mui.com/system/styled/
 
     09-07:
   Persižiūrėti ir pasitestuoti savame projekte arba naudojant https://stackblitz.com/run?file=demo.tsx: 
     https://www.youtube.com/watch?v=r42jcDXSFM0&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&index=3&ab_channel=Codevolution
-      privaloma: 3-10
-      rekomenduojama: 3-13
+    **  privaloma: 3-10
+    **  rekomenduojama: 3-13
 
       09-08:
   privaloma:
     Persižiūrėti ir pasitestuoti savame projekte arba naudojant https://stackblitz.com/run?file=demo.tsx: 
     https://www.youtube.com/watch?v=r42jcDXSFM0&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO&index=3&ab_channel=Codevolution
-      10-20
+    **  10-20
+   ** 21 - navbar
+   ** 22 - menu
+   ** 23 - link
+    45 - responsiveness
+    46 - customizing theme
       
-  rekomenduojama: Peržiūrėti paskaitos įrašą.
+  rekomenduojama: Peržiūrėti paskaitos įrašą. 
+  --- irase failu struktura 2:18:28 
+  // todo: sutvarkyti failu struktura kuriamame projekte
 
   09-09:
   Kiek įmanoma labiau atakrtoti RangeInput įvesties laukų elgseną pagal:
@@ -113,11 +122,12 @@ Props and composition give you all the flexibility you need to customize a compo
   Peržiūrėti: siekiant suprasti principą:
   **  https://www.youtube.com/watch?v=7FQS6_fOgR8&ab_channel=JonBellah
   ***  https://www.youtube.com/watch?v=yqgX-c4zPFU&ab_channel=Weibenfalk
-    https://www.youtube.com/watch?v=IsnOTmB88tE&ab_channel=TravelsCode
+  -  https://www.youtube.com/watch?v=IsnOTmB88tE&ab_channel=TravelsCode
     88-91 paskaitų įrašai
 
   Atlikti:
     Surasti internete jus dominantį kompleksinį įvesties lauką ir įgalinti jo funcionalumą.
+    // todo: kuriamam projektui igalinti funkcionaluma
 
 ---------- React - Trečia Savaitė -----------
 09-13:
@@ -162,3 +172,28 @@ Props and composition give you all the flexibility you need to customize a compo
 
   Papildomai:
     * https://www.youtube.com/watch?v=T1eKsuqHVjI&ab_channel=AtilaIO
+
+    09-19:
+  Privaloma:
+    * Peržiūrėti paskaitos įrašą
+    * Susikurti dirbtinai duomenų bazei skirtą json failą
+    * Apsirašyti service'us parsisiųsti duomenis
+    * Susikurti pradinį kontekstą ir filtrus
+
+  Papildomai:
+    * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript.
+
+09-20
+  Privaloma:
+    * Pasidaryti kintamą puslapio išdėstymą naudojant temos kintamuosius
+    
+  Papildomai:
+    * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript.
+
+09-21:
+  Privaloma:
+  * Atlikti 4 n.d. iš CAO
+  * Atlikti 5 n.d. iš CAO
+
+  Papildomai:
+  * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript
