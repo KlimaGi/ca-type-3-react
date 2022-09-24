@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-
-const buttonStyle = {
-  fontSize: 30,
-  padding: '5px 20px',
-  cursor: 'pointer',
-};
+import Input from './input';
+import Button from './button';
 
 const CounterExample = () => {
   const [count, setCount] = useState<number>(0);
@@ -18,31 +14,13 @@ const CounterExample = () => {
         display: 'flex', justifyContent: 'center', gap: 20, marginTop: '1rem',
       }}
       >
-        <input
+        <Input
           type="number"
-          style={{
-            fontSize: 30,
-            width: 140,
-            textAlign: 'center',
-          }}
           value={step}
-          // Number(e.target.value)
           onChange={(e) => setStep(e.target.valueAsNumber)}
         />
-        <button
-          type="button"
-          style={buttonStyle}
-          onClick={() => setCount(count - step)}
-        >
-          -
-        </button>
-        <button
-          type="button"
-          style={buttonStyle}
-          onClick={() => setCount(count + step)}
-        >
-          +
-        </button>
+        <Button onClick={() => setCount(count - step)}>-</Button>
+        <Button onClick={() => setCount(count + step)}>+</Button>
 
       </div>
 
