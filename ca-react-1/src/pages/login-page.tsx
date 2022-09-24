@@ -5,12 +5,12 @@ import {
   Typography,
   TextField,
   Button,
-  FormControlLabel
+  FormControlLabel,
 } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
-import CustomSizeCheckbox from '../components/form-controls/custom-size-checkbox'
+import CustomSizeCheckbox from '../components/form-controls/custom-size-checkbox';
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(true);
@@ -20,7 +20,7 @@ const LoginPage = () => {
 
     console.log('siunciami duomenys i serveri per globalios busenos valdymo iraki');
     console.log({ email, password, remember });
-  }
+  };
 
   return (
     <Box
@@ -30,7 +30,8 @@ const LoginPage = () => {
         placeItems: 'center',
         backgroundImage: 'url(/image-bg.png)',
         backgroundSize: 'cover',
-      }}>
+      }}
+    >
       <Paper
         component="form"
         sx={{
@@ -44,7 +45,7 @@ const LoginPage = () => {
         onSubmit={handleSubmit}
       >
         <SecurityIcon sx={{ fontSize: 50, alignSelf: 'center' }} color="primary" />
-        <Typography component="h1" variant="h4" align='center'>Login Form</Typography>
+        <Typography component="h1" variant="h4" align="center">Login</Typography>
         <TextField
           variant="filled"
           label="Email"
@@ -63,7 +64,8 @@ const LoginPage = () => {
           control={(
             <CustomSizeCheckbox
               checked={remember}
-              onChange={(e) => setRemember(e.target.checked)} />
+              onChange={(e) => setRemember(e.target.checked)}
+            />
           )}
           label="Remember"
         />
@@ -77,7 +79,7 @@ const LoginPage = () => {
         </Button>
       </Paper>
     </Box>
-  )
-}
+  );
+};
 
 export default LoginPage;

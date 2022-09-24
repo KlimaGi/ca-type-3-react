@@ -3,7 +3,7 @@ import { MUIStyledCommonProps, Theme } from '@mui/system';
 import {
   Checkbox,
   styled,
-  CheckboxProps
+  CheckboxProps,
 } from '@mui/material';
 
 const CustomSizeCheckbox = styled(Checkbox, {
@@ -12,7 +12,7 @@ const CustomSizeCheckbox = styled(Checkbox, {
   svg: {
     height: size,
     width: size,
-  }
+  },
 
 })) as StyledComponent<
   Omit<CheckboxProps, 'size'> & MUIStyledCommonProps<Theme>,

@@ -49,8 +49,8 @@ NAUDOJANT PAMOKOS PROJEKTĄ IR TYPESCRIPT:
 
   Išskaidykite pamokos '85 - useState example': <CounterExample> komponentą smulkesniais 
   komponentais ir pritaikykite stilius naudojant ***.module.scss failus:
-    * <Input ... />
-    * <Button ... />
+    ** <Input ... />
+    ** <Button ... />
 
 
 9-05:
@@ -197,3 +197,11 @@ Props and composition give you all the flexibility you need to customize a compo
 
   Papildomai:
   * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript
+
+  09-22:
+  Privaloma:
+    * https://www.youtube.com/watch?v=6ThXsUwLWvc&t=4s&ab_channel=WebDevSimplified
+    * Sukurti useRangeFilter hook'są
+
+  Papildomai:
+    * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript.

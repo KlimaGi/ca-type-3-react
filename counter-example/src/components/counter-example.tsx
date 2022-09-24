@@ -17,6 +17,7 @@ const CounterExample = () => {
         <Input
           type="number"
           value={step}
+          // lifting state up example
           onChange={(e) => setStep(e.target.valueAsNumber)}
         />
         <Button onClick={() => setCount(count - step)}>-</Button>

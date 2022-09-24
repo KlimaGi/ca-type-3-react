@@ -5,10 +5,10 @@ import {
   Typography,
   TextField,
   Button,
-  Autocomplete
+  Autocomplete,
 } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
-import CheckboxGroup, { CheckboxOption } from '../components/form-controls/checkbox-group'
+import CheckboxGroup, { CheckboxOption } from '../components/form-controls/checkbox-group';
 
 const contentType2CheckboxOption = ({ id, title }: ContentType): CheckboxOption => ({
   value: id,
@@ -54,7 +54,12 @@ const RegisterPage: React.FC = () => {
     e.preventDefault();
 
     console.log('siunciami duomenys i serveri per globalios busenos valdymo iranki');
-    console.log({ email, password, selectedTopics, selectedContentTypes: selectedContentTypes.map(checkboxOptionToContentType), });
+    console.log({
+      email,
+      password,
+      selectedTopics,
+      selectedContentTypes: selectedContentTypes.map(checkboxOptionToContentType),
+    });
   };
 
   return (
@@ -65,7 +70,8 @@ const RegisterPage: React.FC = () => {
         placeItems: 'center',
         backgroundImage: 'url(/image-bg.png)',
         backgroundSize: 'cover',
-      }}>
+      }}
+    >
       <Paper
         component="form"
         sx={{
@@ -79,7 +85,7 @@ const RegisterPage: React.FC = () => {
         onSubmit={handleSubmit}
       >
         <SecurityIcon sx={{ fontSize: 50, alignSelf: 'center' }} color="primary" />
-        <Typography component="h1" variant="h4" align='center'>Register</Typography>
+        <Typography component="h1" variant="h4" align="center">Register</Typography>
         <TextField
           variant="filled"
           label="Email"
@@ -104,7 +110,7 @@ const RegisterPage: React.FC = () => {
           renderInput={(inputProps) => (
             <TextField
               label="Interesting topics"
-              variant='filled'
+              variant="filled"
               {...inputProps}
             />
           )}
@@ -112,7 +118,7 @@ const RegisterPage: React.FC = () => {
 
         <CheckboxGroup
           label="Interesting information types"
-          name='interest-types'
+          name="interest-types"
           options={contentTypeOptions}
           value={selectedContentTypes}
           onChange={(_, newContentTypes) => setSelectedContentTypes(newContentTypes)}
@@ -128,7 +134,7 @@ const RegisterPage: React.FC = () => {
         </Button>
       </Paper>
     </Box>
-  )
-}
+  );
+};
 
-export default RegisterPage
+export default RegisterPage;
