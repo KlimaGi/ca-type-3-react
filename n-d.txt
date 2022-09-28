@@ -108,21 +108,37 @@ Props and composition give you all the flexibility you need to customize a compo
     45 - responsiveness
     46 - customizing theme
       
-  rekomenduojama: Peržiūrėti paskaitos įrašą. 
+ ** rekomenduojama: Peržiūrėti paskaitos įrašą. 
   --- irase failu struktura 2:18:28 
-  // todo: sutvarkyti failu struktura kuriamame projekte
+  // todo: sutvarkyti failu struktura kuriamame projekte  
+  (-- 09.07 paskaitos tema:  sudetingesniu kontroliuotu komponentu kurimas )
+  
 
   09-09:
   Kiek įmanoma labiau atakrtoti RangeInput įvesties laukų elgseną pagal:
     https://www.1a.lt/c/buitine-technika/namams-smulki-buitine-technika/puku-surinkejai/2z5?plb=29
 
-  rekomenduojama: Peržiūrėti paskaitos įrašą.
+**  rekomenduojama: Peržiūrėti paskaitos įrašą.
 
   09-12:
   Peržiūrėti: siekiant suprasti principą:
   **  https://www.youtube.com/watch?v=7FQS6_fOgR8&ab_channel=JonBellah
   ***  https://www.youtube.com/watch?v=yqgX-c4zPFU&ab_channel=Weibenfalk
-  -  https://www.youtube.com/watch?v=IsnOTmB88tE&ab_channel=TravelsCode
+  **  https://www.youtube.com/watch?v=IsnOTmB88tE&ab_channel=TravelsCode
+ 
+ ---------------
+const [form, setForm] = useState({ name: '', email: '' });
+
+const onChange = (e) => {
+  const { value, name } = e.target;
+
+  setForm((state) => ({
+    ...state,
+    [name]: value,
+  }));
+}
+------------
+
     88-91 paskaitų įrašai
 
   Atlikti:
@@ -205,3 +221,30 @@ Props and composition give you all the flexibility you need to customize a compo
 
   Papildomai:
     * Pasipraktikuoti spręsti JavaScript dalies užduotis su TypeScript.
+
+    09-23:
+  1. Iškelti visą logigą susijusią su puodeliais į hooksa useProducts
+
+  2. Susinchronizuoti 'useCheckboxFilter' komponento parametrus
+    * Atkreipti dėmesį į parametrų formatą JSON dokumentacijoje:
+      https://github.com/typicode/json-server#filter
+    * Įvertinti, kad tiek 'useCheckboxFilter' tiek 'useRangeField' parametrų sinchronizavimas
+      neturi įtakoti kitų (jau egiztuojančių parametrų)
+
+09-26:
+  * Sukurti savo puslapio idėjos dalį - filtruojamą duomenų aprsiuntimą naudojant url parametrus.
+
+---------------------------------------- React - Penkta Savaitė ------------------------------------
+
+09-27: 
+  * Sugalvoti visos savo projekto idėjos puslapius
+    * Juos sugrupuoti pagal išdėstymus (Layout'us). Route group'sai gali būti kitų route group'sų dalis.
+    * Apgalvokite, ką galės matyti Skirtingų rolių vartotojai (ADMIN, USER, GUEST)
+  * Sukurkite savo projekte tuščius puslapius, sustruktūrizuotus pagal sugalvotą grupavimą
+  * Sukurkite savo projekte <Routes> struktūrą ir kelius iki puslapių
+  * Sukurkite savo projekte Route group'sam pritaikykite layout'us
+
+  09-28:
+  * Savo puslapiui sukurti atskirus esybių puslapius, naudojant responsive Routes
+    * parsiųskite duomenis naudodami dinaminio route'o id
+    * Atvaizduokite gautus duomenis visiems ekrano dydžiamas (nepersistenkit anksčiau laiko)
