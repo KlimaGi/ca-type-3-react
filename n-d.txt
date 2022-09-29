@@ -150,25 +150,28 @@ const onChange = (e) => {
   Privaloma:
     Peržiūrėti ir pasidaryti analogiškai su TypeScript:
     https://www.youtube.com/watch?v=9xhKH43llhU&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&ab_channel=BenAwad
-      1-3
+    **  1 useState
+    **  2 useEffect - dependency array corner cases'u ypatumus patyrineti [url, setValue]
+    **  3 useRef - patyrineti issamiau usecase'us
+    4-8 paziureti likusius irasus.
 
   Papildomai:
     Pasiruošti pristatyti savo kompleksinį komponentą, kurį darėt savaitgalį. [+0.25] 
 
     09-14:
   Privaloma:
-    0. https://www.youtube.com/watch?v=GIU8ekYndKw&ab_channel=Academind
-    1. Peržiūrėti paskaitos įrašą (1.5x)
-    2. Iš MUI puslapio pakopijuoti "drawer layout": https://mui.com/material-ui/react-drawer/#mini-variant-drawer
-    3. Išskaidyti komponentais nežiūrint į pamokos darbą (Žiūrėti tik tuomet, jeigu esat aklavietei)
+  **  0. https://www.youtube.com/watch?v=GIU8ekYndKw&ab_channel=Academind
+  **  1. Peržiūrėti paskaitos įrašą (1.5x)
+  ~  2. Iš MUI puslapio pakopijuoti "drawer layout": https://mui.com/material-ui/react-drawer/#mini-variant-drawer
+  ~  3. Išskaidyti komponentais nežiūrint į pamokos darbą (Žiūrėti tik tuomet, jeigu esat aklavietei)
       * https://mui.com/system/styled/
-
-  Papildoma:
-    https://www.youtube.com/watch?v=CTDZ-5MnETA&ab_channel=TheCleverDev
+       ** -- isskaidyti savo projekta komponentais ir struktura
+  Papildoma:  (custom dropdown)
+   ** https://www.youtube.com/watch?v=CTDZ-5MnETA&ab_channel=TheCleverDev
 
     09-15:
   Privaloma:
-    * Įsisavinimui
+    ** Įsisavinimui
       Ranka spalvotai perbraižyti 'sidebar-layout-passing-props-down.png' iliustraciją ir atsiųsti nuotrauką į chat'ą
     * Naujų įgūdžių laviminui
       arba tą patį dalyką atlikti naudojant (Figma, Sketch, AdobeXD arba Adobe Photoshop)
@@ -247,4 +250,4 @@ const onChange = (e) => {
   09-28:
   * Savo puslapiui sukurti atskirus esybių puslapius, naudojant responsive Routes
     * parsiųskite duomenis naudodami dinaminio route'o id
-    * Atvaizduokite gautus duomenis visiems ekrano dydžiamas (nepersistenkit anksčiau laiko)
+     Atvaizduokite gautus duomenis visiems ekrano dydžiamas (nepersistenkit anksčiau laiko)
