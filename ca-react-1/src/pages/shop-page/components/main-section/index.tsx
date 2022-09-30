@@ -5,7 +5,7 @@ import DrawerHeader from '../drawer-header';
 const MainSection = () => (
   <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
     <DrawerHeader />
-    <Typography paragraph>
+    <Typography paragraph sx={(theme) => ({ color: theme.palette.manoSpalva.main })}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
       enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
@@ -19,7 +19,7 @@ const MainSection = () => (
       consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
       sapien faucibus et molestie ac.
     </Typography>
-    <Typography paragraph>
+    <Typography paragraph sx={(theme) => ({ color: theme.palette.manoSpalva.light })}>
       Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
       eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
       neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra

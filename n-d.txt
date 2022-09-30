@@ -251,3 +251,26 @@ const onChange = (e) => {
   * Savo puslapiui sukurti atskirus esybių puslapius, naudojant responsive Routes
     * parsiųskite duomenis naudodami dinaminio route'o id
      Atvaizduokite gautus duomenis visiems ekrano dydžiamas (nepersistenkit anksčiau laiko)
+
+     09-29:
+  Registracijos formoje:
+    1. Parsiųsti ir būsenos kintamuosiuose išsaugoti categories ir marketingIntrests duomenis
+      * categories duomenis pritaikykite ir pateikite Autocomplete field'ui
+      * marketingIntrests duomenis pritaikykite ir pateikite CheckboxGroup field'ui
+    2. Sukurti Formik helper'ius naudojant useFormik hook'są
+      * Įrašykite pradines reikšmes:
+      * Įrašykite onSubmit funkciją
+    3. Įgalinkite TextField laukams:
+      * įgalinkite įvedamų reikšmių dvipusį susiejimą su formik.values
+      * paliestumo būsenos saugojimą formik.fields objekte
+      * pateikite validacijos schemą (KOLKAS TIK TextField LAUKAMS)
+      * įgalinkite klaidų rodymą
+    4. Pritaikykite AuthForm komponentui validumo reikšmė naudojant formik.dirty ir formik.isValid
+    helper'ius
+
+  Savo projekte:
+    Visų formų TextField'us apdoroti su Formik ir yup validacijomis.
+
+09-30:
+  * Surasti kaip patikrinti jog slaptažodžiai yra vienodi
+  * pritaikyti validaciją CheckboxGroup
