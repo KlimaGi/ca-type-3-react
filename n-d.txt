@@ -177,6 +177,7 @@ const onChange = (e) => {
       arba tą patį dalyką atlikti naudojant (Figma, Sketch, AdobeXD arba Adobe Photoshop)
 
   Papildoma:
+  (customizing theme)
     * https://www.youtube.com/watch?v=ZyQlpX7lCRE&ab_channel=Codevolution
 
     09-16:
