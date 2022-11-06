@@ -178,11 +178,11 @@ const onChange = (e) => {
 
   Papildoma:
   (customizing theme)
-    * https://www.youtube.com/watch?v=ZyQlpX7lCRE&ab_channel=Codevolution
+    ** https://www.youtube.com/watch?v=ZyQlpX7lCRE&ab_channel=Codevolution
 
     09-16:
   Privaloma:
-    * https://www.youtube.com/watch?v=pgZXqS-r9gE&ab_channel=MostlyCode
+    ** https://www.youtube.com/watch?v=pgZXqS-r9gE&ab_channel=MostlyCode
     * Persibraižyti React.context diagramą: https://github.com/ZilvinasVidmantas/CA_Type_11/blob/main/React%20%5B82-%5D/vaizdai/context.png
     * Aprašyti savo galutinio projekto puslapius RAŠTU:
       * Reikalingi duomenys?
